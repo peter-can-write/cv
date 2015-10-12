@@ -1,0 +1,1461 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>body {
+  width: 45em;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
+}
+
+body .markdown-body
+{
+  padding: 30px;
+}
+
+@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,d09GRgABAAAAAAYcAA0AAAAACjQAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAABMAAAABwAAAAca8vGTk9TLzIAAAFMAAAARAAAAFZG1VHVY21hcAAAAZAAAAA+AAABQgAP9AdjdnQgAAAB0AAAAAQAAAAEACICiGdhc3AAAAHUAAAACAAAAAj//wADZ2x5ZgAAAdwAAADRAAABEKyikaNoZWFkAAACsAAAAC0AAAA2AtXoA2hoZWEAAALgAAAAHAAAACQHngNFaG10eAAAAvwAAAAQAAAAEAwAACJsb2NhAAADDAAAAAoAAAAKALIAVG1heHAAAAMYAAAAHwAAACABEAB2bmFtZQAAAzgAAALBAAAFu3I9x/Nwb3N0AAAF/AAAAB0AAAAvaoFvbwAAAAEAAAAAzBdyYwAAAADP2IQvAAAAAM/bz7t4nGNgZGFgnMDAysDB1Ml0hoGBoR9CM75mMGLkYGBgYmBlZsAKAtJcUxgcPsR8iGF2+O/AEMPsznAYKMwIkgMA5REMOXicY2BgYGaAYBkGRgYQsAHyGMF8FgYFIM0ChED+h5j//yEk/3KoSgZGNgYYk4GRCUgwMaACRoZhDwCs7QgGAAAAIgKIAAAAAf//AAJ4nHWMMQrCQBBF/0zWrCCIKUQsTDCL2EXMohYGSSmorScInsRGL2DOYJe0Ntp7BK+gJ1BxF1stZvjz/v8DRghQzEc4kIgKwiAppcA9LtzKLSkdNhKFY3HF4lK69ExKslx7Xa+vPRVS43G98vG1DnkDMIBUgFN0MDXflU8tbaZOUkXUH0+U27RoRpOIyCKjbMCVejwypzJJG4jIwb43rfl6wbwanocrJm9XFYfskuVC5K/TPyczNU7b84CXcbxks1Un6H6tLH9vf2LRnn8Ax7A5WQAAAHicY2BkYGAA4teL1+yI57f5ysDNwgAC529f0kOmWRiYVgEpDgYmEA8AUzEKsQAAAHicY2BkYGB2+O/AEMPCAAJAkpEBFbAAADgKAe0EAAAiAAAAAAQAAAAEAAAAAAAAKgAqACoAiAAAeJxjYGRgYGBhsGFgYgABEMkFhAwM/xn0QAIAD6YBhwB4nI1Ty07cMBS9QwKlQapQW3VXySvEqDCZGbGaHULiIQ1FKgjWMxknMfLEke2A+IJu+wntrt/QbVf9gG75jK577Lg8K1qQPCfnnnt8fX1NRC/pmjrk/zprC+8D7tBy9DHgBXoWfQ44Av8t4Bj4Z8CLtBL9CniJluPXASf0Lm4CXqFX8Q84dOLnMB17N4c7tBo1AS/Qi+hTwBH4rwHHwN8DXqQ30XXAS7QaLwSc0Gn8NuAVWou/gFmnjLrEaEh9GmDdDGgL3B4JsrRPDU2hTOiMSuJUIdKQQayiAth69r6akSSFqIJuA19TrzCIaY8sIoxyrNIrL//pw7A2iMygkX5vDj+G+kuoLdX4GlGK/8Lnlz6/h9MpmoO9rafrz7ILXEHHaAx95s9lsI7AHNMBWEZHULnfAXwG9/ZqdzLI08iuwRloXE8kfhXYAvE23+23DU3t626rbs8/8adv+9DWknsHp3E17oCf+Z48rvEQNZ78paYM38qfk3v/u3l3u3GXN2Dmvmvpf1Srwk3pB/VSsp512bA/GG5i2WJ7wu430yQ5K3nFGiOqgtmSB5pJVSizwaacmUZzZhXLlZTq8qGGFY2YcSkqbth6aW1tRmlaCFs2016m5qn36SbJrqosG4uMV4aP2PHBmB3tjtmgN2izkGQyLWprekbIntJFing32a5rKWCN/SdSoga45EJykyQ7asZvHQ8PTm6cslIpwyeyjbVltNikc2HTR7YKh9LBl9DADC0U/jLcBZDKrMhUBfQBvXRzLtFtjU9eNHKin0x5InTqb8lNpfKv1s1xHzTXRqgKzek/mb7nB8RZTCDhGEX3kK/8Q75AmUM/eLkfA+0Hi908Kx4eNsMgudg5GLdRD7a84npi+YxNr5i5KIbW5izXas7cHXIMAau1OueZhfj+cOcP3P8MNIWLyYOBuxL6DRylJ4cAAAB4nGNgYoAALjDJyIAOWMCiTIxMLDmZedkABtIBygAAAA==) format('woff');
+}
+
+.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px/1.4 Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code {
+  font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.markdown-body .octicon {
+  font: normal normal 16px octicons-anchor;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.markdown-body .octicon-link:before {
+  content: '\f05c';
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .anchor {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  display: none;
+  color: #000;
+  vertical-align: middle;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  padding-left: 8px;
+  margin-left: -30px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  display: inline-block;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+.markdown-body .highlight {
+  background: #fff;
+}
+
+.markdown-body .highlight .h {
+  color: #333;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.markdown-body .highlight .mf,
+.markdown-body .highlight .mh,
+.markdown-body .highlight .mi,
+.markdown-body .highlight .mo,
+.markdown-body .highlight .il,
+.markdown-body .highlight .m {
+  color: #945277;
+}
+
+.markdown-body .highlight .s,
+.markdown-body .highlight .sb,
+.markdown-body .highlight .sc,
+.markdown-body .highlight .sd,
+.markdown-body .highlight .s2,
+.markdown-body .highlight .se,
+.markdown-body .highlight .sh,
+.markdown-body .highlight .si,
+.markdown-body .highlight .sx,
+.markdown-body .highlight .s1 {
+  color: #df5000;
+}
+
+.markdown-body .highlight .kc,
+.markdown-body .highlight .kd,
+.markdown-body .highlight .kn,
+.markdown-body .highlight .kp,
+.markdown-body .highlight .kr,
+.markdown-body .highlight .kt,
+.markdown-body .highlight .k,
+.markdown-body .highlight .o {
+  font-weight: bold;
+}
+
+.markdown-body .highlight .kt {
+  color: #458;
+}
+
+.markdown-body .highlight .c,
+.markdown-body .highlight .cm,
+.markdown-body .highlight .c1 {
+  color: #998;
+  font-style: italic;
+}
+
+.markdown-body .highlight .cp,
+.markdown-body .highlight .cs,
+.markdown-body .highlight .cp .h {
+  color: #999;
+  font-weight: bold;
+}
+
+.markdown-body .highlight .cs {
+  font-style: italic;
+}
+
+.markdown-body .highlight .n {
+  color: #333;
+}
+
+.markdown-body .highlight .na,
+.markdown-body .highlight .nv,
+.markdown-body .highlight .vc,
+.markdown-body .highlight .vg,
+.markdown-body .highlight .vi {
+  color: #008080;
+}
+
+.markdown-body .highlight .nb {
+  color: #0086B3;
+}
+
+.markdown-body .highlight .nc {
+  color: #458;
+  font-weight: bold;
+}
+
+.markdown-body .highlight .no {
+  color: #094e99;
+}
+
+.markdown-body .highlight .ni {
+  color: #800080;
+}
+
+.markdown-body .highlight .ne {
+  color: #990000;
+  font-weight: bold;
+}
+
+.markdown-body .highlight .nf {
+  color: #945277;
+  font-weight: bold;
+}
+
+.markdown-body .highlight .nn {
+  color: #555;
+}
+
+.markdown-body .highlight .nt {
+  color: #000080;
+}
+
+.markdown-body .highlight .err {
+  color: #a61717;
+  background-color: #e3d2d2;
+}
+
+.markdown-body .highlight .gd {
+  color: #000;
+  background-color: #fdd;
+}
+
+.markdown-body .highlight .gd .x {
+  color: #000;
+  background-color: #faa;
+}
+
+.markdown-body .highlight .ge {
+  font-style: italic;
+}
+
+.markdown-body .highlight .gr {
+  color: #aa0000;
+}
+
+.markdown-body .highlight .gh {
+  color: #999;
+}
+
+.markdown-body .highlight .gi {
+  color: #000;
+  background-color: #dfd;
+}
+
+.markdown-body .highlight .gi .x {
+  color: #000;
+  background-color: #afa;
+}
+
+.markdown-body .highlight .go {
+  color: #888;
+}
+
+.markdown-body .highlight .gp {
+  color: #555;
+}
+
+.markdown-body .highlight .gs {
+  font-weight: bold;
+}
+
+.markdown-body .highlight .gu {
+  color: #800080;
+  font-weight: bold;
+}
+
+.markdown-body .highlight .gt {
+  color: #aa0000;
+}
+
+.markdown-body .highlight .ow {
+  font-weight: bold;
+}
+
+.markdown-body .highlight .w {
+  color: #bbb;
+}
+
+.markdown-body .highlight .sr {
+  color: #017936;
+}
+
+.markdown-body .highlight .ss {
+  color: #8b467f;
+}
+
+.markdown-body .highlight .bp {
+  color: #999;
+}
+
+.markdown-body .highlight .gc {
+  color: #999;
+  background-color: #EAF2F5;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  line-height: 10px;
+  color: #000;
+  border: 1px solid #cfcfcf;
+  border-radius: 2px;
+}
+
+.markdown-body .highlight .pl-coc,
+.markdown-body .highlight .pl-entm,
+.markdown-body .highlight .pl-eoa,
+.markdown-body .highlight .pl-mai .pl-sf,
+.markdown-body .highlight .pl-pdv,
+.markdown-body .highlight .pl-sc,
+.markdown-body .highlight .pl-sr,
+.markdown-body .highlight .pl-v,
+.markdown-body .highlight .pl-vpf {
+  color: #0086b3;
+}
+
+.markdown-body .highlight .pl-eoac,
+.markdown-body .highlight .pl-mdht,
+.markdown-body .highlight .pl-mi1,
+.markdown-body .highlight .pl-mri,
+.markdown-body .highlight .pl-va,
+.markdown-body .highlight .pl-vpu {
+  color: #008080;
+}
+
+.markdown-body .highlight .pl-c,
+.markdown-body .highlight .pl-pdc {
+  color: #b4b7b4;
+  font-style: italic;
+}
+
+.markdown-body .highlight .pl-k,
+.markdown-body .highlight .pl-ko,
+.markdown-body .highlight .pl-kolp,
+.markdown-body .highlight .pl-mc,
+.markdown-body .highlight .pl-mr,
+.markdown-body .highlight .pl-ms,
+.markdown-body .highlight .pl-s,
+.markdown-body .highlight .pl-sok,
+.markdown-body .highlight .pl-st {
+  color: #6e5494;
+}
+
+.markdown-body .highlight .pl-ef,
+.markdown-body .highlight .pl-enf,
+.markdown-body .highlight .pl-enm,
+.markdown-body .highlight .pl-entc,
+.markdown-body .highlight .pl-eoi,
+.markdown-body .highlight .pl-sf,
+.markdown-body .highlight .pl-smc {
+  color: #d12089;
+}
+
+.markdown-body .highlight .pl-ens,
+.markdown-body .highlight .pl-eoai,
+.markdown-body .highlight .pl-kos,
+.markdown-body .highlight .pl-mh .pl-pdh,
+.markdown-body .highlight .pl-mp,
+.markdown-body .highlight .pl-pde,
+.markdown-body .highlight .pl-stp {
+  color: #458;
+}
+
+.markdown-body .highlight .pl-enti {
+  color: #d12089;
+  font-weight: bold;
+}
+
+.markdown-body .highlight .pl-cce,
+.markdown-body .highlight .pl-enc,
+.markdown-body .highlight .pl-kou,
+.markdown-body .highlight .pl-mq {
+  color: #f93;
+}
+
+.markdown-body .highlight .pl-mp1 .pl-sf {
+  color: #458;
+  font-weight: bold;
+}
+
+.markdown-body .highlight .pl-cos,
+.markdown-body .highlight .pl-ent,
+.markdown-body .highlight .pl-md,
+.markdown-body .highlight .pl-mdhf,
+.markdown-body .highlight .pl-ml,
+.markdown-body .highlight .pl-pdc1,
+.markdown-body .highlight .pl-pds,
+.markdown-body .highlight .pl-s1,
+.markdown-body .highlight .pl-scp,
+.markdown-body .highlight .pl-sol {
+  color: #df5000;
+}
+
+.markdown-body .highlight .pl-c1,
+.markdown-body .highlight .pl-cn,
+.markdown-body .highlight .pl-pse,
+.markdown-body .highlight .pl-pse .pl-s2,
+.markdown-body .highlight .pl-vi {
+  color: #a31515;
+}
+
+.markdown-body .highlight .pl-mb,
+.markdown-body .highlight .pl-pdb {
+  color: #df5000;
+  font-weight: bold;
+}
+
+.markdown-body .highlight .pl-mi,
+.markdown-body .highlight .pl-pdi {
+  color: #6e5494;
+  font-style: italic;
+}
+
+.markdown-body .highlight .pl-ms1 {
+  background-color: #f5f5f5;
+}
+
+.markdown-body .highlight .pl-mdh,
+.markdown-body .highlight .pl-mdi {
+  font-weight: bold;
+}
+
+.markdown-body .highlight .pl-mdr {
+  color: #0086b3;
+  font-weight: bold;
+}
+
+.markdown-body .highlight .pl-s2 {
+  color: #333;
+}
+
+.markdown-body .highlight .pl-ii {
+  background-color: #df5000;
+  color: #fff;
+}
+
+.markdown-body .highlight .pl-ib {
+  background-color: #f93;
+}
+
+.markdown-body .highlight .pl-id {
+  background-color: #a31515;
+  color: #fff;
+}
+
+.markdown-body .highlight .pl-iu {
+  background-color: #b4b7b4;
+}
+
+.markdown-body .highlight .pl-mo {
+  color: #969896;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  float: left;
+  margin: 0.3em 0 0.25em -1.6em;
+  vertical-align: middle;
+}</style><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+MathJax.Hub.Config({
+  config: ["MMLorHTML.js"],
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX"],
+  tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+    displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+    processEscapes: false
+  },
+  TeX: {
+    extensions: ["AMSmath.js", "AMSsymbols.js"],
+    TagSide: "right",
+    TagIndent: ".8em",
+    MultLineWidth: "85%",
+    equationNumbers: {
+      autoNumber: "AMS",
+    },
+    unicode: {
+      fonts: "STIXGeneral,'Arial Unicode MS'"
+    }
+  },
+  showProcessingMessages: false
+});
+</script>
+<script type="text/javascript" charset="utf-8" src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.2/raphael-min.js"></script>
+<script type="text/javascript" charset="utf-8" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+<script type="text/javascript" charset="utf-8" src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.4/sequence-diagram-min.js"></script>
+<script type="text/javascript">// flowchart, v1.3.4
+// Copyright (c)2014 Adriano Raiano (adrai).
+// Distributed under MIT license
+// http://adrai.github.io/flowchart.js
+!function(){function a(b,c){if(!b||"function"==typeof b)return c;var d={};for(var e in c)d[e]=c[e];for(e in b)b[e]&&(d[e]="object"==typeof d[e]?a(d[e],b[e]):b[e]);return d}function b(a,b){if("function"==typeof Object.create)a.super_=b,a.prototype=Object.create(b.prototype,{constructor:{value:a,enumerable:!1,writable:!0,configurable:!0}});else{a.super_=b;var c=function(){};c.prototype=b.prototype,a.prototype=new c,a.prototype.constructor=a}}function c(a,b,c){var d,e,f="M{0},{1}";for(d=2,e=2*c.length+2;e>d;d+=2)f+=" L{"+d+"},{"+(d+1)+"}";var g=[b.x,b.y];for(d=0,e=c.length;e>d;d++)g.push(c[d].x),g.push(c[d].y);var h=a.paper.path(f,g);h.attr("stroke",a.options["element-color"]),h.attr("stroke-width",a.options["line-width"]);var i=a.options.font,j=a.options["font-family"],k=a.options["font-weight"];return i&&h.attr({font:i}),j&&h.attr({"font-family":j}),k&&h.attr({"font-weight":k}),h}function d(a,b,c,d){var e,f;"[object Array]"!==Object.prototype.toString.call(c)&&(c=[c]);var g="M{0},{1}";for(e=2,f=2*c.length+2;f>e;e+=2)g+=" L{"+e+"},{"+(e+1)+"}";var h=[b.x,b.y];for(e=0,f=c.length;f>e;e++)h.push(c[e].x),h.push(c[e].y);var i=a.paper.path(g,h);i.attr({stroke:a.options["line-color"],"stroke-width":a.options["line-width"],"arrow-end":a.options["arrow-end"]});var j=a.options.font,k=a.options["font-family"],l=a.options["font-weight"];if(j&&i.attr({font:j}),k&&i.attr({"font-family":k}),l&&i.attr({"font-weight":l}),d){var m=!1,n=a.paper.text(0,0,d),o=!1,p=c[0];b.y===p.y&&(o=!0);var q=0,r=0;m?(q=b.x>p.x?b.x-(b.x-p.x)/2:p.x-(p.x-b.x)/2,r=b.y>p.y?b.y-(b.y-p.y)/2:p.y-(p.y-b.y)/2,o?(q-=n.getBBox().width/2,r-=a.options["text-margin"]):(q+=a.options["text-margin"],r-=n.getBBox().height/2)):(q=b.x,r=b.y,o?(q+=a.options["text-margin"]/2,r-=a.options["text-margin"]):(q+=a.options["text-margin"]/2,r+=a.options["text-margin"])),n.attr({"text-anchor":"start","font-size":a.options["font-size"],fill:a.options["font-color"],x:q,y:r}),j&&n.attr({font:j}),k&&n.attr({"font-family":k}),l&&n.attr({"font-weight":l})}return i}function e(a,b,c,d,e,f,g,h){var i,j,k,l,m,n={x:null,y:null,onLine1:!1,onLine2:!1};return i=(h-f)*(c-a)-(g-e)*(d-b),0===i?n:(j=b-f,k=a-e,l=(g-e)*j-(h-f)*k,m=(c-a)*j-(d-b)*k,j=l/i,k=m/i,n.x=a+j*(c-a),n.y=b+j*(d-b),j>0&&1>j&&(n.onLine1=!0),k>0&&1>k&&(n.onLine2=!0),n)}function f(a,b){b=b||{},this.paper=new Raphael(a),this.options=r.defaults(b,q),this.symbols=[],this.lines=[],this.start=null}function g(a,b,c){this.chart=a,this.group=this.chart.paper.set(),this.symbol=c,this.connectedTo=[],this.symbolType=b.symbolType,this.flowstate=b.flowstate||"future",this.next_direction=b.next&&b.direction_next?b.direction_next:void 0,this.text=this.chart.paper.text(0,0,b.text),b.key&&(this.text.node.id=b.key+"t"),this.text.node.setAttribute("class",this.getAttr("class")+"t"),this.text.attr({"text-anchor":"start",x:this.getAttr("text-margin"),fill:this.getAttr("font-color"),"font-size":this.getAttr("font-size")});var d=this.getAttr("font"),e=this.getAttr("font-family"),f=this.getAttr("font-weight");d&&this.text.attr({font:d}),e&&this.text.attr({"font-family":e}),f&&this.text.attr({"font-weight":f}),b.link&&this.text.attr("href",b.link),b.target&&this.text.attr("target",b.target);var g=this.getAttr("maxWidth");if(g){for(var h=b.text.split(" "),i="",j=0,k=h.length;k>j;j++){var l=h[j];this.text.attr("text",i+" "+l),i+=this.text.getBBox().width>g?"\n"+l:" "+l}this.text.attr("text",i.substring(1))}if(this.group.push(this.text),c){var m=this.getAttr("text-margin");c.attr({fill:this.getAttr("fill"),stroke:this.getAttr("element-color"),"stroke-width":this.getAttr("line-width"),width:this.text.getBBox().width+2*m,height:this.text.getBBox().height+2*m}),c.node.setAttribute("class",this.getAttr("class")),b.link&&c.attr("href",b.link),b.target&&c.attr("target",b.target),b.key&&(c.node.id=b.key),this.group.push(c),c.insertBefore(this.text),this.text.attr({y:c.getBBox().height/2}),this.initialize()}}function h(a,b){var c=a.paper.rect(0,0,0,0,20);b=b||{},b.text=b.text||"Start",g.call(this,a,b,c)}function i(a,b){var c=a.paper.rect(0,0,0,0,20);b=b||{},b.text=b.text||"End",g.call(this,a,b,c)}function j(a,b){var c=a.paper.rect(0,0,0,0);b=b||{},g.call(this,a,b,c)}function k(a,b){var c=a.paper.rect(0,0,0,0);b=b||{},g.call(this,a,b,c),c.attr({width:this.text.getBBox().width+4*this.getAttr("text-margin")}),this.text.attr({x:2*this.getAttr("text-margin")});var d=a.paper.rect(0,0,0,0);d.attr({x:this.getAttr("text-margin"),stroke:this.getAttr("element-color"),"stroke-width":this.getAttr("line-width"),width:this.text.getBBox().width+2*this.getAttr("text-margin"),height:this.text.getBBox().height+2*this.getAttr("text-margin"),fill:this.getAttr("fill")}),b.key&&(d.node.id=b.key+"i");var e=this.getAttr("font"),f=this.getAttr("font-family"),h=this.getAttr("font-weight");e&&d.attr({font:e}),f&&d.attr({"font-family":f}),h&&d.attr({"font-weight":h}),b.link&&d.attr("href",b.link),b.target&&d.attr("target",b.target),this.group.push(d),d.insertBefore(this.text),this.initialize()}function l(a,b){b=b||{},g.call(this,a,b),this.textMargin=this.getAttr("text-margin"),this.text.attr({x:3*this.textMargin});var d=this.text.getBBox().width+4*this.textMargin,e=this.text.getBBox().height+2*this.textMargin,f=this.textMargin,h=e/2,i={x:f,y:h},j=[{x:f-this.textMargin,y:e},{x:f-this.textMargin+d,y:e},{x:f-this.textMargin+d+2*this.textMargin,y:0},{x:f-this.textMargin+2*this.textMargin,y:0},{x:f,y:h}],k=c(a,i,j);k.attr({stroke:this.getAttr("element-color"),"stroke-width":this.getAttr("line-width"),fill:this.getAttr("fill")}),b.link&&k.attr("href",b.link),b.target&&k.attr("target",b.target),b.key&&(k.node.id=b.key),k.node.setAttribute("class",this.getAttr("class")),this.text.attr({y:k.getBBox().height/2}),this.group.push(k),k.insertBefore(this.text),this.initialize()}function m(a,b){b=b||{},g.call(this,a,b),this.textMargin=this.getAttr("text-margin"),this.yes_direction="bottom",this.no_direction="right",b.yes&&b.direction_yes&&b.no&&!b.direction_no?"right"===b.direction_yes?(this.no_direction="bottom",this.yes_direction="right"):(this.no_direction="right",this.yes_direction="bottom"):b.yes&&!b.direction_yes&&b.no&&b.direction_no?"right"===b.direction_no?(this.yes_direction="bottom",this.no_direction="right"):(this.yes_direction="right",this.no_direction="bottom"):(this.yes_direction="bottom",this.no_direction="right"),this.yes_direction=this.yes_direction||"bottom",this.no_direction=this.no_direction||"right",this.text.attr({x:2*this.textMargin});var d=this.text.getBBox().width+3*this.textMargin;d+=d/2;var e=this.text.getBBox().height+2*this.textMargin;e+=e/2,e=Math.max(.5*d,e);var f=d/4,h=e/4;this.text.attr({x:f+this.textMargin/2});var i={x:f,y:h},j=[{x:f-d/4,y:h+e/4},{x:f-d/4+d/2,y:h+e/4+e/2},{x:f-d/4+d,y:h+e/4},{x:f-d/4+d/2,y:h+e/4-e/2},{x:f-d/4,y:h+e/4}],k=c(a,i,j);k.attr({stroke:this.getAttr("element-color"),"stroke-width":this.getAttr("line-width"),fill:this.getAttr("fill")}),b.link&&k.attr("href",b.link),b.target&&k.attr("target",b.target),b.key&&(k.node.id=b.key),k.node.setAttribute("class",this.getAttr("class")),this.text.attr({y:k.getBBox().height/2}),this.group.push(k),k.insertBefore(this.text),this.initialize()}function n(a){function b(a){var b=a.indexOf("(")+1,c=a.indexOf(")");return b>=0&&c>=0?d.symbols[a.substring(0,b-1)]:d.symbols[a]}function c(a){var b="next",c=a.indexOf("(")+1,d=a.indexOf(")");return c>=0&&d>=0&&(b=D.substring(c,d),b.indexOf(",")<0&&"yes"!==b&&"no"!==b&&(b="next, "+b)),b}a=a||"",a=a.trim();for(var d={symbols:{},start:null,drawSVG:function(a,b){function c(a){if(g[a.key])return g[a.key];switch(a.symbolType){case"start":g[a.key]=new h(e,a);break;case"end":g[a.key]=new i(e,a);break;case"operation":g[a.key]=new j(e,a);break;case"inputoutput":g[a.key]=new l(e,a);break;case"subroutine":g[a.key]=new k(e,a);break;case"condition":g[a.key]=new m(e,a);break;default:return new Error("Wrong symbol type!")}return g[a.key]}var d=this;this.diagram&&this.diagram.clean();var e=new f(a,b);this.diagram=e;var g={};!function n(a,b,f){var g=c(a);return d.start===a?e.startWith(g):b&&f&&!b.pathOk&&(b instanceof m?(f.yes===a&&b.yes(g),f.no===a&&b.no(g)):b.then(g)),g.pathOk?g:(g instanceof m?(a.yes&&n(a.yes,g,a),a.no&&n(a.no,g,a)):a.next&&n(a.next,g,a),g)}(this.start),e.render()},clean:function(){this.diagram.clean()}},e=[],g=0,n=1,o=a.length;o>n;n++)if("\n"===a[n]&&"\\"!==a[n-1]){var p=a.substring(g,n);g=n+1,e.push(p.replace(/\\\n/g,"\n"))}g<a.length&&e.push(a.substr(g));for(var q=1,r=e.length;r>q;){var s=e[q];s.indexOf(": ")<0&&s.indexOf("(")<0&&s.indexOf(")")<0&&s.indexOf("->")<0&&s.indexOf("=>")<0?(e[q-1]+="\n"+s,e.splice(q,1),r--):q++}for(;e.length>0;){var t=e.splice(0,1)[0];if(t.indexOf("=>")>=0){var u,v=t.split("=>"),w={key:v[0],symbolType:v[1],text:null,link:null,target:null,flowstate:null};if(w.symbolType.indexOf(": ")>=0&&(u=w.symbolType.split(": "),w.symbolType=u[0],w.text=u[1]),w.text&&w.text.indexOf(":>")>=0?(u=w.text.split(":>"),w.text=u[0],w.link=u[1]):w.symbolType.indexOf(":>")>=0&&(u=w.symbolType.split(":>"),w.symbolType=u[0],w.link=u[1]),w.symbolType.indexOf("\n")>=0&&(w.symbolType=w.symbolType.split("\n")[0]),w.link){var x=w.link.indexOf("[")+1,y=w.link.indexOf("]");x>=0&&y>=0&&(w.target=w.link.substring(x,y),w.link=w.link.substring(0,x-1))}if(w.text&&w.text.indexOf("|")>=0){var z=w.text.split("|");w.text=z[0],w.flowstate=z[1].trim()}d.symbols[w.key]=w}else if(t.indexOf("->")>=0)for(var A=t.split("->"),B=0,C=A.length;C>B;B++){var D=A[B],E=b(D),F=c(D),G=null;if(F.indexOf(",")>=0){var H=F.split(",");F=H[0],G=H[1].trim()}if(d.start||(d.start=E),C>B+1){var I=A[B+1];E[F]=b(I),E["direction_"+F]=G,G=null}}}return d}Array.prototype.indexOf||(Array.prototype.indexOf=function(a){"use strict";if(null===this)throw new TypeError;var b=Object(this),c=b.length>>>0;if(0===c)return-1;var d=0;if(arguments.length>0&&(d=Number(arguments[1]),d!=d?d=0:0!==d&&1/0!=d&&d!=-1/0&&(d=(d>0||-1)*Math.floor(Math.abs(d)))),d>=c)return-1;for(var e=d>=0?d:Math.max(c-Math.abs(d),0);c>e;e++)if(e in b&&b[e]===a)return e;return-1}),Array.prototype.lastIndexOf||(Array.prototype.lastIndexOf=function(a){"use strict";if(null===this)throw new TypeError;var b=Object(this),c=b.length>>>0;if(0===c)return-1;var d=c;arguments.length>1&&(d=Number(arguments[1]),d!=d?d=0:0!==d&&d!=1/0&&d!=-(1/0)&&(d=(d>0||-1)*Math.floor(Math.abs(d))));for(var e=d>=0?Math.min(d,c-1):c-Math.abs(d);e>=0;e--)if(e in b&&b[e]===a)return e;return-1}),String.prototype.trim||(String.prototype.trim=function(){return this.replace(/^\s+|\s+$/g,"")});var o=this,p={};"undefined"!=typeof module&&module.exports?module.exports=p:o.flowchart=o.flowchart||p;var q={x:0,y:0,"line-width":3,"line-length":50,"text-margin":10,"font-size":14,"font-color":"black","line-color":"black","element-color":"black",fill:"white","yes-text":"yes","no-text":"no","arrow-end":"block","class":"flowchart",symbols:{start:{},end:{},condition:{},inputoutput:{},operation:{},subroutine:{}}},r={defaults:a,inherits:b};f.prototype.handle=function(a){this.symbols.indexOf(a)<=-1&&this.symbols.push(a);var b=this;return a instanceof m?(a.yes=function(c){return a.yes_symbol=c,a.no_symbol&&(a.pathOk=!0),b.handle(c)},a.no=function(c){return a.no_symbol=c,a.yes_symbol&&(a.pathOk=!0),b.handle(c)}):a.then=function(c){return a.next=c,a.pathOk=!0,b.handle(c)},a},f.prototype.startWith=function(a){return this.start=a,this.handle(a)},f.prototype.render=function(){var a,b=0,c=0,d=0,e=0,f=0,g=0;for(d=0,e=this.symbols.length;e>d;d++)a=this.symbols[d],a.width>b&&(b=a.width),a.height>c&&(c=a.height);for(d=0,e=this.symbols.length;e>d;d++)a=this.symbols[d],a.shiftX(this.options.x+(b-a.width)/2+this.options["line-width"]),a.shiftY(this.options.y+(c-a.height)/2+this.options["line-width"]);for(this.start.render(),d=0,e=this.symbols.length;e>d;d++)a=this.symbols[d],a.renderLines();for(f=this.maxXFromLine,d=0,e=this.symbols.length;e>d;d++){a=this.symbols[d];var h=a.getX()+a.width,i=a.getY()+a.height;h>f&&(f=h),i>g&&(g=i)}this.paper.setSize(f+this.options["line-width"],g+this.options["line-width"])},f.prototype.clean=function(){if(this.paper){var a=this.paper.canvas;a.parentNode.removeChild(a)}},g.prototype.getAttr=function(a){if(!this.chart)return void 0;var b,c=this.chart.options?this.chart.options[a]:void 0,d=this.chart.options.symbols?this.chart.options.symbols[this.symbolType][a]:void 0;return this.chart.options.flowstate&&this.chart.options.flowstate[this.flowstate]&&(b=this.chart.options.flowstate[this.flowstate][a]),b||d||c},g.prototype.initialize=function(){this.group.transform("t"+this.getAttr("line-width")+","+this.getAttr("line-width")),this.width=this.group.getBBox().width,this.height=this.group.getBBox().height},g.prototype.getCenter=function(){return{x:this.getX()+this.width/2,y:this.getY()+this.height/2}},g.prototype.getX=function(){return this.group.getBBox().x},g.prototype.getY=function(){return this.group.getBBox().y},g.prototype.shiftX=function(a){this.group.transform("t"+(this.getX()+a)+","+this.getY())},g.prototype.setX=function(a){this.group.transform("t"+a+","+this.getY())},g.prototype.shiftY=function(a){this.group.transform("t"+this.getX()+","+(this.getY()+a))},g.prototype.setY=function(a){this.group.transform("t"+this.getX()+","+a)},g.prototype.getTop=function(){var a=this.getY(),b=this.getX()+this.width/2;return{x:b,y:a}},g.prototype.getBottom=function(){var a=this.getY()+this.height,b=this.getX()+this.width/2;return{x:b,y:a}},g.prototype.getLeft=function(){var a=this.getY()+this.group.getBBox().height/2,b=this.getX();return{x:b,y:a}},g.prototype.getRight=function(){var a=this.getY()+this.group.getBBox().height/2,b=this.getX()+this.group.getBBox().width;return{x:b,y:a}},g.prototype.render=function(){if(this.next){var a=this.getAttr("line-length");if("right"===this.next_direction){var b=this.getRight();if(this.next.getLeft(),!this.next.isPositioned){this.next.setY(b.y-this.next.height/2),this.next.shiftX(this.group.getBBox().x+this.width+a);var c=this;!function e(){for(var b,d=!1,f=0,g=c.chart.symbols.length;g>f;f++){b=c.chart.symbols[f];var h=Math.abs(b.getCenter().x-c.next.getCenter().x);if(b.getCenter().y>c.next.getCenter().y&&h<=c.next.width/2){d=!0;break}}d&&(c.next.setX(b.getX()+b.width+a),e())}(),this.next.isPositioned=!0,this.next.render()}}else{var d=this.getBottom();this.next.getTop(),this.next.isPositioned||(this.next.shiftY(this.getY()+this.height+a),this.next.setX(d.x-this.next.width/2),this.next.isPositioned=!0,this.next.render())}}},g.prototype.renderLines=function(){this.next&&(this.next_direction?this.drawLineTo(this.next,"",this.next_direction):this.drawLineTo(this.next))},g.prototype.drawLineTo=function(a,b,c){this.connectedTo.indexOf(a)<0&&this.connectedTo.push(a);var f,g=this.getCenter().x,h=this.getCenter().y,i=(this.getTop(),this.getRight()),j=this.getBottom(),k=this.getLeft(),l=a.getCenter().x,m=a.getCenter().y,n=a.getTop(),o=a.getRight(),p=(a.getBottom(),a.getLeft()),q=g===l,r=h===m,s=m>h,t=h>m,u=g>l,v=l>g,w=0,x=this.getAttr("line-length"),y=this.getAttr("line-width");if(c&&"bottom"!==c||!q||!s)if(c&&"right"!==c||!r||!v)if(c&&"left"!==c||!r||!u)if(c&&"right"!==c||!q||!t)if(c&&"right"!==c||!q||!s)if(c&&"bottom"!==c||!u)if(c&&"bottom"!==c||!v)if(c&&"right"===c&&u)f=d(this.chart,i,[{x:i.x+x/2,y:i.y},{x:i.x+x/2,y:n.y-x/2},{x:n.x,y:n.y-x/2},{x:n.x,y:n.y}],b),this.rightStart=!0,a.topEnd=!0,w=i.x+x/2;else if(c&&"right"===c&&v)f=d(this.chart,i,[{x:n.x,y:i.y},{x:n.x,y:n.y}],b),this.rightStart=!0,a.topEnd=!0,w=i.x+x/2;else if(c&&"bottom"===c&&q&&t)f=d(this.chart,j,[{x:j.x,y:j.y+x/2},{x:i.x+x/2,y:j.y+x/2},{x:i.x+x/2,y:n.y-x/2},{x:n.x,y:n.y-x/2},{x:n.x,y:n.y}],b),this.bottomStart=!0,a.topEnd=!0,w=j.x+x/2;else if("left"===c&&q&&t){var z=k.x-x/2;p.x<k.x&&(z=p.x-x/2),f=d(this.chart,k,[{x:z,y:k.y},{x:z,y:n.y-x/2},{x:n.x,y:n.y-x/2},{x:n.x,y:n.y}],b),this.leftStart=!0,a.topEnd=!0,w=k.x}else"left"===c&&(f=d(this.chart,k,[{x:n.x+(k.x-n.x)/2,y:k.y},{x:n.x+(k.x-n.x)/2,y:n.y-x/2},{x:n.x,y:n.y-x/2},{x:n.x,y:n.y}],b),this.leftStart=!0,a.topEnd=!0,w=k.x);else f=d(this.chart,j,[{x:j.x,y:j.y+x/2},{x:j.x+(j.x-n.x)/2,y:j.y+x/2},{x:j.x+(j.x-n.x)/2,y:n.y-x/2},{x:n.x,y:n.y-x/2},{x:n.x,y:n.y}],b),this.bottomStart=!0,a.topEnd=!0,w=j.x+(j.x-n.x)/2;else f=this.leftEnd&&t?d(this.chart,j,[{x:j.x,y:j.y+x/2},{x:j.x+(j.x-n.x)/2,y:j.y+x/2},{x:j.x+(j.x-n.x)/2,y:n.y-x/2},{x:n.x,y:n.y-x/2},{x:n.x,y:n.y}],b):d(this.chart,j,[{x:j.x,y:n.y-x/2},{x:n.x,y:n.y-x/2},{x:n.x,y:n.y}],b),this.bottomStart=!0,a.topEnd=!0,w=j.x+(j.x-n.x)/2;else f=d(this.chart,i,[{x:i.x+x/2,y:i.y},{x:i.x+x/2,y:n.y-x/2},{x:n.x,y:n.y-x/2},{x:n.x,y:n.y}],b),this.rightStart=!0,a.topEnd=!0,w=i.x+x/2;else f=d(this.chart,i,[{x:i.x+x/2,y:i.y},{x:i.x+x/2,y:n.y-x/2},{x:n.x,y:n.y-x/2},{x:n.x,y:n.y}],b),this.rightStart=!0,a.topEnd=!0,w=i.x+x/2;else f=d(this.chart,k,o,b),this.leftStart=!0,a.rightEnd=!0,w=o.x;else f=d(this.chart,i,p,b),this.rightStart=!0,a.leftEnd=!0,w=p.x;else f=d(this.chart,j,n,b),this.bottomStart=!0,a.topEnd=!0,w=j.x;if(f){for(var A=0,B=this.chart.lines.length;B>A;A++)for(var C,D=this.chart.lines[A],E=D.attr("path"),F=f.attr("path"),G=0,H=E.length-1;H>G;G++){var I=[];I.push(["M",E[G][1],E[G][2]]),I.push(["L",E[G+1][1],E[G+1][2]]);for(var J=I[0][1],K=I[0][2],L=I[1][1],M=I[1][2],N=0,O=F.length-1;O>N;N++){var P=[];P.push(["M",F[N][1],F[N][2]]),P.push(["L",F[N+1][1],F[N+1][2]]);var Q=P[0][1],R=P[0][2],S=P[1][1],T=P[1][2],U=e(J,K,L,M,Q,R,S,T);if(U.onLine1&&U.onLine2){var V;R===T?Q>S?(V=["L",U.x+2*y,R],F.splice(N+1,0,V),V=["C",U.x+2*y,R,U.x,R-4*y,U.x-2*y,R],F.splice(N+2,0,V),f.attr("path",F)):(V=["L",U.x-2*y,R],F.splice(N+1,0,V),V=["C",U.x-2*y,R,U.x,R-4*y,U.x+2*y,R],F.splice(N+2,0,V),f.attr("path",F)):R>T?(V=["L",Q,U.y+2*y],F.splice(N+1,0,V),V=["C",Q,U.y+2*y,Q+4*y,U.y,Q,U.y-2*y],F.splice(N+2,0,V),f.attr("path",F)):(V=["L",Q,U.y-2*y],F.splice(N+1,0,V),V=["C",Q,U.y-2*y,Q+4*y,U.y,Q,U.y+2*y],F.splice(N+2,0,V),f.attr("path",F)),N+=2,C+=2}}}this.chart.lines.push(f)}(!this.chart.maxXFromLine||this.chart.maxXFromLine&&w>this.chart.maxXFromLine)&&(this.chart.maxXFromLine=w)},r.inherits(h,g),r.inherits(i,g),r.inherits(j,g),r.inherits(k,g),r.inherits(l,g),l.prototype.getLeft=function(){var a=this.getY()+this.group.getBBox().height/2,b=this.getX()+this.textMargin;return{x:b,y:a}},l.prototype.getRight=function(){var a=this.getY()+this.group.getBBox().height/2,b=this.getX()+this.group.getBBox().width-this.textMargin;return{x:b,y:a}},r.inherits(m,g),m.prototype.render=function(){this.yes_direction&&(this[this.yes_direction+"_symbol"]=this.yes_symbol),this.no_direction&&(this[this.no_direction+"_symbol"]=this.no_symbol);var a=this.getAttr("line-length");if(this.bottom_symbol){var b=this.getBottom();this.bottom_symbol.getTop(),this.bottom_symbol.isPositioned||(this.bottom_symbol.shiftY(this.getY()+this.height+a),this.bottom_symbol.setX(b.x-this.bottom_symbol.width/2),this.bottom_symbol.isPositioned=!0,this.bottom_symbol.render())}if(this.right_symbol){var c=this.getRight();if(this.right_symbol.getLeft(),!this.right_symbol.isPositioned){this.right_symbol.setY(c.y-this.right_symbol.height/2),this.right_symbol.shiftX(this.group.getBBox().x+this.width+a);var d=this;!function e(){for(var b,c=!1,f=0,g=d.chart.symbols.length;g>f;f++){b=d.chart.symbols[f];var h=Math.abs(b.getCenter().x-d.right_symbol.getCenter().x);if(b.getCenter().y>d.right_symbol.getCenter().y&&h<=d.right_symbol.width/2){c=!0;break}}c&&(d.right_symbol.setX(b.getX()+b.width+a),e())}(),this.right_symbol.isPositioned=!0,this.right_symbol.render()}}},m.prototype.renderLines=function(){this.yes_symbol&&this.drawLineTo(this.yes_symbol,this.getAttr("yes-text"),this.yes_direction),this.no_symbol&&this.drawLineTo(this.no_symbol,this.getAttr("no-text"),this.no_direction)},p.parse=n}();
+</script>
+<script type="text/javascript">
+(function (win, doc) {
+  function onReady(fn) {
+    if (doc.addEventListener) {
+      doc.addEventListener('DOMContentLoaded', fn);
+    } else {
+      doc.attachEvent('onreadystatechange', function() {
+        if (doc.readyState === 'interactive')
+          fn();
+      });
+    }
+  }
+
+  win.convertUML = function(className, converter, settings) {
+    var charts = doc.querySelectorAll("pre." + className),
+        arr = [],
+        i, j, maxItem, diagaram, text, curNode;
+
+    // Is there a settings object?
+    if (settings === void 0) {
+        settings = {};
+    }
+
+    // Make sure we are dealing with an array
+    for(i = 0, maxItem = charts.length; i < maxItem; i++) arr.push(charts[i])
+
+    // Find the UML source element and get the text
+    for (i = 0, maxItem = arr.length; i < maxItem; i++) {
+        childEl = arr[i].firstChild;
+        parentEl = childEl.parentNode;
+        text = "";
+        for (j = 0; j < childEl.childNodes.length; j++) {
+            curNode = childEl.childNodes[j];
+            whitespace = /^\s*$/;
+            if (curNode.nodeName === "#text" && !(whitespace.test(curNode.nodeValue))) {
+                text = curNode.nodeValue;
+                break;
+            }
+        }
+
+        // Do UML conversion and replace source
+        el = doc.createElement('div');
+        el.className = className;
+        parentEl.parentNode.insertBefore(el, parentEl);
+        parentEl.parentNode.removeChild(parentEl);
+        diagram = converter.parse(text);
+        diagram.drawSVG(el, settings);
+    }
+  }
+
+  onReady(function(){convertUML('uml-flowchart', flowchart);});
+  onReady(function(){convertUML('uml-sequence-diagram', Diagram, {theme: 'simple'});});
+})(window, document)
+</script>
+<title>cv</title></head><body><article class="markdown-body"><p>% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8</p>
+
+<p>\documentclass[a4paper,10pt,oneside]{article}</p>
+
+<p>% Do not stop on errors during compilation.
+\nonstopmode</p>
+
+<p>%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% PREAMBLE.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</p>
+
+<p>% Long table for page layout.
+\usepackage{longtable}</p>
+
+<p>% For side-by-side columns
+\usepackage{multicol}</p>
+
+<p>% For paragraph spacing
+\newcommand{\parbreak}{\vspace{\baselineskip} \par}</p>
+
+<p>% Geometry package for page margins.
+\usepackage[
+top=0.7in,
+left=0.7in,
+right=0.7in,
+bottom=0.65in,
+includefoot]
+{geometry}</p>
+
+<p>% XeLaTeX packages.
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX}
+\usepackage{xunicode}
+\usepackage{xltxtra}</p>
+
+<p>% Font: Use "Tinos" as the main typeface (\textnormal{}, \normalfont).
+% The "Tinos" fonts are released under the Apache License Version 2.0,
+% and can be downloaded for free at <a href="http://www.fontsquirrel.com/fonts/tinos">http://www.fontsquirrel.com/fonts/tinos</a>.
+% Symbol table: <a href="http://www.fileformat.info/info/unicode/font/tinos/grid.htm">http://www.fileformat.info/info/unicode/font/tinos/grid.htm</a>
+\setmainfont
+[Path=./Fonts/Tinos/,
+ItalicFont=Tinos-Italic,
+BoldFont=Tinos-Bold,
+BoldItalicFont=Tinos-BoldItalic]
+{Tinos-Regular.ttf}</p>
+
+<p>% Sans-serif font: Switched to "Tinos".
+\renewcommand{\sffamily}{\rmfamily}</p>
+
+<p>% Typewriter (monospace) font: Switched to "Tinos".
+\renewcommand{\ttfamily}{\rmfamily}</p>
+
+<p>% Small caps font: Switched to "Tinos".
+\renewcommand{\scshape}{\rmfamily}</p>
+
+<p>% Secondary font: "GNU FreeFont".
+% The "GNU FreeFont" fonts are released under the
+% GNU General Public License Version 3, and can be downloaded
+% for free at <a href="https://savannah.gnu.org/projects/freefont/">https://savannah.gnu.org/projects/freefont/</a>.
+\newcommand{\UseSecondaryFont}{\fontspec
+[Path=./Fonts/GNUFreeFont/,
+ItalicFont=FreeSerifItalic,
+BoldFont=FreeSerifBold,
+BoldItalicFont=FreeSerifBoldItalic]
+{FreeSerif.otf}}</p>
+
+<p>% Symbols (unicode).
+\newcommand{\BulletSymbol}{\char"25CF}</p>
+
+<p>% PDF settings and properties.
+\usepackage{hyperref}</p>
+
+<p>% Headers and footers: Blank header, page number in footer.
+\makeatletter
+\def\ps@plain{%
+\def\@oddhead{}%
+\def\@evenhead{}%
+\def\@oddfoot{\footnotesize\hfill{\thepage}\hfill}%
+\def\@evenfoot{\footnotesize\hfill{\thepage}\hfill}}
+\makeatother</p>
+
+<p>\pagestyle{plain}</p>
+
+<p>% Paragraph style: No indentation.
+\setlength{\parindent}{0in}</p>
+
+<p>% Footnotes: Use symbols instead of numbers for labels.
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}</p>
+
+<p>% Abbreviations for months.
+\newcommand{\LongMonth}[1]{%
+\ifcase#1\relax
+\or January%
+\or February%
+\or March%
+\or April%
+\or May%
+\or June%
+\or July%
+\or August%
+\or September%
+\or October%
+\or November%
+\or December%
+\fi}</p>
+
+<p>\newcommand{\Datestamp}[3]{\mbox{\LongMonth{#2} #1}}</p>
+
+<p>% Macro: title (name).
+\renewcommand{\title}[1]{%
+\pdfbookmark{#1}{#1}%
+\par\begin{center}%
+\par\begin{Huge}%
+\textbf{#1}%
+\par\end{Huge}%
+\par\end{center}%
+\par\vspace{-1.75em}\par}</p>
+
+<p>% Macro: subtitle (personal information below name).
+\newenvironment{subtitle}
+{\par\begin{center}%
+\par\begin{small}}
+{\par\end{small}%
+\par\end{center}\par}</p>
+
+<p>% Macro: body (rest of the document).
+\newenvironment{body}
+{\par\vspace{-1em}\par
+\begin{longtable}{p{0.15\textwidth}p{0.80\textwidth}}}
+{\par\end{longtable}\par}</p>
+
+<p>% Macro: section (new section for Education, Research Experience, etc.).
+\renewcommand{\section}[2]{\[-1em]\pdfbookmark{#1}{#1}\%
+\fontsize{9pt}{11pt}\selectfont\raggedright\textbf{\MakeUppercase{#2}}&amp;}</p>
+
+<p>% Macro: detail (text in smaller font under an entry).
+\newenvironment{detail}{\small\parbreak}</p>
+
+<p>% PDF settings and properties.
+\hypersetup{
+pdftitle={CV},
+pdfauthor={Peter Goldsborough},
+pdfsubject={<a href="http://www.thecodeinn.blogspot.com">http://www.thecodeinn.blogspot.com</a>},
+pdfcreator={},
+pdfproducer={},
+pdfkeywords={},
+pdfpagemode={},
+bookmarks=true,
+unicode=true,
+bookmarksopen=true,
+pdfstartview=FitH,
+pdfpagelayout=OneColumn,
+pdfpagemode=UseOutlines,
+hidelinks,
+breaklinks}</p>
+
+<p>%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ACTUAL DOCUMENT.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</p>
+
+<p>\begin{document}</p>
+
+<p>%%%%%%%%%%%%%%%
+% TITLE BLOCK %
+%%%%%%%%%%%%%%%</p>
+
+<p>\title{Peter Goldsborough}</p>
+
+<p>\begin{subtitle}
+\href{<a href="https://www.google.com/maps/place/46%C2%B037'42.6%22N+13%C2%B049'28.0%22E">https://www.google.com/maps/place/46°37'42.6%22N+13°49'28.0%22E</a>}
+{Untere Fellacher Str. 46, 9500 Villach, Austria}
+\, \BulletSymbol\,
++43\,(0)\,676\,785\,7700
+\par
+\href{mailto:<a href="mailto:petergoldsborough@hotmail.com">petergoldsborough@hotmail.com</a>}
+{<a href="mailto:petergoldsborough@hotmail.com">petergoldsborough@hotmail.com</a>}
+\,\BulletSymbol\,
+\href{<a href="http://www.thecodeinn.blogspot.com">http://www.thecodeinn.blogspot.com</a>}
+{<a href="http://www.thecodeinn.blogspot.com">http://www.thecodeinn.blogspot.com</a>}
+\end{subtitle}</p>
+
+<p>\begin{body}</p>
+
+<p>%%%%%%%%%%%%%%%
+%% EDUCATION %%
+%%%%%%%%%%%%%%%</p>
+
+<p>\section{Education}
+{Education}</p>
+
+<p>\href{<a href="http://it-gymnasium.at">http://it-gymnasium.at</a>}
+{\textbf{BG | BRG St.Martin}},
+Villach, Austria
+\hfill
+\Datestamp{2007}{09}{01} --
+\Datestamp{2015}{07}{01} (expected)
+\begin{detail}</p>
+
+<p>Thesis:
+\href{<a href="http://issuu.com/petergoldsborough/docs/thesis">http://issuu.com/petergoldsborough/docs/thesis</a>}
+{Developing a Digital Synthesizer in C++}
+\par
+Supervisor: Professor Martin Kastner
+\par
+Grade Average (2013/2014):
+1.1 \footnote{The Austrian school system grades from 1 (best) to 5 (worst); 15 subjects. Top of class.}
+\par
+Special Mention: School President (2013/2014)</p>
+
+<p>\begin{multicols}{2}
+Additional Classes:
+\begin{itemize}
+  \item Advanced Mathematics
+  \item Applied Physics
+  \item Cisco Networking
+\end{itemize}</p>
+
+<p>Organizations and Activities:
+\begin{itemize}
+  \item Student Representatives Team
+  \item Rhetoric, Debate and Philosophy Team
+  \item Information Technology Team
+\end{itemize}
+\end{multicols}
+\end{detail}</p>
+
+<p>%%%%%%%%%%%%%%%%%%%%%
+%% WORK EXPERIENCE %%
+%%%%%%%%%%%%%%%%%%%%%</p>
+
+<p>\section{Work Experience}
+{Work Experience}</p>
+
+<p>\href{<a href="https://nes.aau.at">https://nes.aau.at</a>}
+{\textbf{Institute of Networked and Embedded Systems}},
+University of Klagenfurt, Austria</p>
+
+<p>\parbreak</p>
+
+<p>Research Intern
+\hfill \Datestamp{2014}{10}{01} -- Present</p>
+
+<p>\begin{detail}
+After a successful summer internship I was employed as a part-time research intern at the Institute for Networked and Embedded Systems at the University of Klagenfurt. My responsibilities include the porting of an existing MATLAB Non-Intrusive-Appliance-Load-Monitoring (NIALM) algorithm and associated Python codebase to C++ for performance gains as well as the extraction, processing and visualization of appliance power data using the UDOO development board and the PALDI load-disaggregation algorithm. The technologies I use include C++, Python, MATLAB, SQLite3, Bash, Gnuplot, JSON and \LaTeX{}.
+\end{detail}</p>
+
+<p>\parbreak</p>
+
+<p>Summer Intern
+\hfill \Datestamp{2014}{07}{01}</p>
+
+<p>\begin{detail}
+I had my first work experience at the Institute for Networked and Embedded Systems at the University of Klagenfurt in July 2014, where I worked on Non-Intrusive-Appliance-Load-Monitoring (NIALM) algorithms based on real-time Particle Filtering on a UDOO development Board. I implemented the load-disaggregation algorithms with Python, C++ and SQLite3; visualized them in a web-app with Python, Flask, Heroku, PostgreSQL, HTML, CSS and Javascript and sourced appliance data using Arduino, C and Bash Shell Script. My final report was written with the \LaTeX{} document preparation system.
+\end{detail}</p>
+
+<p>%%%%%%%%%%%%%%%%%%%
+%% ORGANIZATIONS %%
+%%%%%%%%%%%%%%%%%%%</p>
+
+<p>\section{Organizations}
+{Organizations}</p>
+
+<p>\textbf{European Youth Parliament}</p>
+
+<p>\parbreak</p>
+
+<p>Regional Coordinator
+\hfill \Datestamp{2013}{07}{01} -- Present</p>
+
+<p>\begin{detail}
+The European Youth Parliament (EYP) is a politically-motivated, non-governmental organization attempting to spread political awareness among young people. There are regular meetings of varying priority and duration all over Europe concerning current EU-related topics. These topics are discussed and debated in a parliament simulation. As I see it, the European Youth Parliament is identical to the ``real'' European Parliament --- we are just more productive. Since July 2013 I hold the position of Regional Coordinator for my state, Carinthia. My responsibilities include, among others, the coordination and organization of all regional sessions and meetings, as well as being the go-to person for all requests or inquiries regarding the EYP in Carinthia.
+\end{detail}</p>
+
+<p>\parbreak</p>
+
+<p>\textbf{Student Representatives Team, BG | BRG St.Martin}</p>
+
+<p>\parbreak</p>
+
+<p>School President \hfill \Datestamp{2013}{09}{10} -- \Datestamp{2014}{07}{10}</p>
+
+<p>\begin{detail}
+I was elected school president for the 2013/2014 academic year. For my period one of my primary aims was to bring the team of student representatives closer to the students. I put in place monthly meetings between representatives of our school's 48 classes, my two deputies and me, to discuss previous, current and future actions of the team. Another big concern of mine was to update our ridiculously antiquated IT infrastructure. After negotiations with our head mistress, I managed to get our school administration to buy 32 new computer installations worth 60 000 Euros.
+\end{detail}</p>
+
+<p>%%%%%%%%%%%%%%
+%% PROJECTS %%
+%%%%%%%%%%%%%%</p>
+
+<p>\section{Projects}
+{Projects}</p>
+
+<p>\textbf{Blog}</p>
+
+<p>\begin{detail}
+Since July 2013 I have my own blog, on which I regularly post tutorials and articles on a variety of topics, as well as projects or code that I explain and make available for other people to learn from and use. I see it as a digital archive and showcase of my projects and development as well as my active participation in the open source movement.
+\parbreak
+Link: \href{<a href="http://thecodeinn.blogspot.com%7D%7Bhttp://thecodeinn.blogspot.com">http://thecodeinn.blogspot.com}{http://thecodeinn.blogspot.com</a>}
+\end{detail}</p>
+
+<p>\parbreak</p>
+
+<p>\textbf{EYP Day Villach 2015}</p>
+
+<p>\begin{detail}
+From September 2014 to February 2015 I was the Head-Organizer of the European Youth Parliament (EYP) Day in Villach, Austria, which took place on the 5th and 6th of February 2015. I managed a team of five organizers, together with whom I raised over 1300 Euros in public and private funding --- e.g. from Infineon Technologies or the Carinthian International Club; negotiated deals with McDonalds and Subway to supply us with food and beverages for our coffee and lunch breaks -- in exchange for various forms of advertisement -- and raised enough interest to get our session on national television.
+\parbreak</p>
+
+<p>Session page: \href{<a href="http://www.eypaustria.org/eypdays/eyp-day-villach/%7D%7Bhttp://www.eypaustria.org/eypdays/eyp-day-villach/">http://www.eypaustria.org/eypdays/eyp-day-villach/}{http://www.eypaustria.org/eypdays/eyp-day-villach/</a>}
+\par
+TV link (relevant part at around 1m:35s; URL shortened for length): \href{<a href="http://goo.gl/XBzv0g%7D%7Bhttp://goo.gl/XBzv0g">http://goo.gl/XBzv0g}{http://goo.gl/XBzv0g</a>}
+\end{detail}</p>
+
+<p>\parbreak</p>
+
+<p>\textbf{Building a Text Editor with PyQt}</p>
+
+<p>\begin{detail}
+In August and September of 2014 I worked on a 4-part freelance tutorial project, titled "Building a text editor with PyQt", for which I built a text editor with the Python GUI framework PyQt. All four parts were published on Binpress, the marketplace for commercial and open-source software. According to Alexis Santos, the editor of Binpress, the series has become one of the most popular in its category and was shared more than a hundred times on Twitter, Facebook, Reddit and LinkedIn. Moreover, it was featured in two of the most widespread Python Newsletters --- PythonWeekly (issue 155) and PyCoder's Weekly (issues 131 and 132) --- and has been starred 25+ times on GitHub.
+\parbreak
+Binpress link: \href{<a href="http://binpress.com/tutorial/building-a-text-editor-with-pyqt-part-one/143%7D%7Bhttp://binpress.com/tutorial/building-a-text-editor-with-pyqt-part-one/143">http://binpress.com/tutorial/building-a-text-editor-with-pyqt-part-one/143}{http://binpress.com/tutorial/building-a-text-editor-with-pyqt-part-one/143</a>}
+\par
+Github tutorial repository: \href{<a href="https://github.com/goldsborough/Writer-Tutorial%7D%7Bhttps://github.com/goldsborough/Writer-Tutorial">https://github.com/goldsborough/Writer-Tutorial}{https://github.com/goldsborough/Writer-Tutorial</a>}
+\end{detail}</p>
+
+<p>\parbreak</p>
+
+<p>\textbf{Developing a Digital Synthesizer in C++}</p>
+
+<p>\begin{detail}
+Between January 2014 and February 2015 I worked on my final academic year thesis, "Developing a Digital Synthesizer in C++", in which I describe the theoretical concepts behind and implementation of a digital music synthesizer. The knowledge of mathematics, digital signal processing, audio programming and computer science which I acquired through this project, paired together with around 10 000 lines of C++, Qt, Python and other code, paved the way for \emph{Anthem} --- an open-source, C++ Frequency Modulation Synthesizer.
+\parbreak
+Thesis (written with \LaTeX): \href{<a href="http://issuu.com/petergoldsborough/docs/thesis%7D%7Bhttp://issuu.com/petergoldsborough/docs/thesis">http://issuu.com/petergoldsborough/docs/thesis}{http://issuu.com/petergoldsborough/docs/thesis</a>}
+\par</p>
+
+<p>\emph{Anthem} GitHub project page: \href{<a href="https://github.com/goldsborough/Anthem%7D%7Bhttps://github.com/goldsborough/Anthem">https://github.com/goldsborough/Anthem}{https://github.com/goldsborough/Anthem</a>}
+\end{detail}</p>
+
+<p>\parbreak</p>
+
+<p>\textbf{GitHub}</p>
+
+<p>\begin{detail}
+Most of my current and past projects using a variety of different technologies can be found on GitHub, either as repositories, for larger projects, or as gists, for smaller programs, scripts or snippets.
+\parbreak
+Repositories: \href{<a href="https://github.com/goldsborough%7D%7Bhttps://github.com/goldsborough">https://github.com/goldsborough}{https://github.com/goldsborough</a>}
+\par
+Gists: \href{<a href="https://gist.github.com/goldsborough%7D%7Bhttps://gist.github.com/goldsborough">https://gist.github.com/goldsborough}{https://gist.github.com/goldsborough</a>}
+\end{detail}</p>
+
+<p>%%%%%%%%%%%%%%%%%
+%% HARD SKILLS %%
+%%%%%%%%%%%%%%%%%</p>
+
+<p>\section{Hard Skills}
+{Hard Skills}</p>
+
+<p>C/C++, Qt, Python, PyQt, \LaTeX
+\par
+HTML, CSS, SASS, JavaScript, SQL, Flask, Heroku
+\par
+UNIX, Linux, Windows, Git, Digital Signal Processing
+\par
+Arduino, Atmel AVR, Electronics, Raspberry Pi, UDOO
+\par
+</p>
+
+<p>%%%%%%%%%%%%%%%%%
+%% SOFT SKILLS %%
+%%%%%%%%%%%%%%%%%</p>
+
+<p>\section{Soft Skills}
+{Soft Skills}</p>
+
+<p>Team player by day, lone wolf by night
+\par
+Public Speaking, Rhetoric, Debate
+\par
+Leadership, Organization, Decisiveness
+\par
+Ambition, Perfectionism, Hard-working</p>
+
+<p>%%%%%%%%%%%%%%%%%%%%
+%% CERTIFICATIONS %%
+%%%%%%%%%%%%%%%%%%%%</p>
+
+<p>\section{Certifications}
+{Certifications}</p>
+
+<p>Cisco CCNA Discovery: Networking for Home and Small Businesses
+\par
+Cisco CCNA Discovery: Working at a Small-to-Medium Business or ISP
+\par
+Certificate in Advanced English (CAE)
+\par
+Dipl^{o}me d'\'{E}tudes en Langue Fran\c{c}aise (DELF)</p>
+
+<p>%%%%%%%%%%%%%%%
+%% INTERESTS %%
+%%%%%%%%%%%%%%%</p>
+
+<p>\section{Interests}
+{Interests}</p>
+
+<p>Computer Science, Electronic Music, Entrepreneurship, Blogging (\href{<a href="http://thecodeinn.blogspot.com%7D%7Bhttp://thecodeinn.blogspot.com">http://thecodeinn.blogspot.com}{http://thecodeinn.blogspot.com</a>}), Open Source Movement, Ayn Rand and Objectivism, 20\textsuperscript{th} century literature, Skiing, Participation in and organization of European Youth Parliament Sessions, Playing icehockey</p>
+
+<p>%%%%%%%%%%%%%%%
+%% LANGUAGES %%
+%%%%%%%%%%%%%%%</p>
+
+<p>\section{Languages}
+{Languages}</p>
+
+<p>English: Native language
+\par
+German: Native language
+\par
+French: Intermediate</p>
+
+<p>%%%%%%%%%%%%%%
+%% PERSONAL %%
+%%%%%%%%%%%%%%</p>
+
+<p>\section{Personal Information}
+{Personal Information}</p>
+
+<p>Born: July 26, 1997 in Villach, Austria
+\par
+Citizenships: Austria, France, USA</p>
+
+<p>%%%%%%%%%%%%%%%%
+%% REFERENCES %%
+%%%%%%%%%%%%%%%%</p>
+
+<p>\section{References}
+{References}</p>
+
+<p>\textbf{Dipl. Ing. Dominik Egarter}
+\par
+Researcher at University of Klagenfurt
+\begin{detail}
+University of Klagenfurt
+\par
+Institute for Networked and Embedded Systems
+\par
+Lakeside Science and Technology Park B10.02.17, 9020 Klagenfurt, Austria
+\par
+\href{mailto:<a href="mailto:doegarte@gmail.com">doegarte@gmail.com</a>}
+{<a href="mailto:doegarte@gmail.com">doegarte@gmail.com</a>}
+\,\BulletSymbol\,
++43\, (0)\, 699\, 1221\, 8822
+\end{detail}</p>
+
+<p>\parbreak</p>
+
+<p>\textbf{Univ.-Prof. Dr. Wilfried Elmenreich}
+\par
+Professor of Smart Grids at University of Klagenfurt
+\begin{detail}
+University of Klagenfurt
+\par
+Institute for Networked and Embedded Systems
+\par
+Lakeside Science and Technology Park B10.02.17, 9020 Klagenfurt, Austria
+\par
+\href{mailto:<a href="mailto:wilfried.elmenreich@aau.at">wilfried.elmenreich@aau.at</a>}
+{<a href="mailto:wilfried.elmenreich@aau.at">wilfried.elmenreich@aau.at</a>}
+\,\BulletSymbol\,
++43 (0) 463 2700 9936 49
+\end{detail}</p>
+
+<p>\parbreak</p>
+
+<p>\textbf{MMag. Martin Kastner}
+\par
+Professor at BG | BRG St.Martin Villach &amp; Thesis Supervisor
+\begin{detail}
+BG | BRG St.Martin Villach
+\par
+St. Martiner-Straße 7, 9500 Villach, Austria
+\par
+\href{mailto:<a href="mailto:martin.kastner@it-gymnasium.at">martin.kastner@it-gymnasium.at</a>}
+{<a href="mailto:martin.kastner@it-gymnasium.at">martin.kastner@it-gymnasium.at</a>}
+\, \BulletSymbol\,
++43 (0) 664 489 2688
+\end{detail}</p>
+
+<p>\parbreak</p>
+
+<p>\textbf{Alexis Santos}
+\par
+Editor at Binpress
+\begin{detail}
+Binpress
+\par
+The Marketplace for Commercial Open-Source Software
+\par
+2483 Old Middlefield Way, Mountain View, CA 94043, USA
+\par
+\href{mailto:<a href="mailto:alexis.santos@icloud.com">alexis.santos@icloud.com</a>}
+{<a href="mailto:alexis.santos@icloud.com">alexis.santos@icloud.com</a>}
+\,\BulletSymbol\,
++1 407 334 3151
+\end{detail}</p>
+
+<p>\end{body}</p>
+
+<p>\end{document}</p>
+</article></body></html>
