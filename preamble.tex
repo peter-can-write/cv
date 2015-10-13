@@ -1,158 +1,88 @@
-\documentclass[a4paper,10pt,oneside]{article}
+\documentclass[a4paper, 10pt, oneside]{article}
 
-% Do not stop on errors during compilation.
-\nonstopmode
+\usepackage[a4paper, left=0.8in, right=0.8in, bottom=0.6in, top=0.4in]{geometry}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% PREAMBLE.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[utf8]{inputenc}
 
-% Long table for page layout.
-\usepackage{longtable}
+% For symbols
+\usepackage{amsmath}
+\usepackage{amssymb}
 
-% For side-by-side columns
 \usepackage{multicol}
 
-\newcommand{\parbreak}{\vspace{\baselineskip}}
-\addtolength{\parskip}{\baselineskip}
+\usepackage[american]{babel}
 
-% Geometry package for page margins.
-\usepackage[
-top=0.7in,
-left=0.7in,
-right=0.7in,
-bottom=0.65in,
-includefoot]
-{geometry}
+\usepackage[autostyle=true]{csquotes}
 
-% XeLaTeX packages.
-\usepackage{fontspec}
-\defaultfontfeatures{Ligatures=TeX}
-\usepackage{xunicode}
-\usepackage{xltxtra}
+\usepackage[usenames, dvipsnames]{xcolor}
 
-% Font: Use "Tinos" as the main typeface (\textnormal{}, \normalfont).
-% The "Tinos" fonts are released under the Apache License Version 2.0,
-% and can be downloaded for free at <http://www.fontsquirrel.com/fonts/tinos>.
-% Symbol table: <http://www.fileformat.info/info/unicode/font/tinos/grid.htm>
-\setmainfont
-[Path=./fonts/Tinos/,
-ItalicFont=Tinos-Italic,
-BoldFont=Tinos-Bold,
-BoldItalicFont=Tinos-BoldItalic]
-{Tinos-Regular.ttf}
+\usepackage{libertine}
 
-% Sans-serif font: Switched to "Tinos".
-\renewcommand{\sffamily}{\rmfamily}
+\usepackage{tikz}
 
-% Typewriter (monospace) font: Switched to "Tinos".
-\renewcommand{\ttfamily}{\rmfamily}
-
-% Small caps font: Switched to "Tinos".
-\renewcommand{\scshape}{\rmfamily}
-
-% Secondary font: "GNU FreeFont".
-% The "GNU FreeFont" fonts are released under the
-% GNU General Public License Version 3, and can be downloaded
-% for free at <https://savannah.gnu.org/projects/freefont/>.
-\newcommand{\UseSecondaryFont}{\fontspec
-[Path=./Fonts/GNUFreeFont/,
-ItalicFont=FreeSerifItalic,
-BoldFont=FreeSerifBold,
-BoldItalicFont=FreeSerifBoldItalic]
-{FreeSerif.otf}}
-
-% Symbols (unicode).
-\newcommand{\BulletSymbol}{\char"25CF}
-
-% PDF settings and properties.
 \usepackage{hyperref}
 
-% Headers and footers: Blank header, page number in footer.
-\makeatletter
-\def\ps@plain{%
-\def\@oddhead{}%
-\def\@evenhead{}%
-\def\@oddfoot{\footnotesize\hfill{\thepage}\hfill}%
-\def\@evenfoot{\footnotesize\hfill{\thepage}\hfill}}
-\makeatother
+\usepackage{graphics}
 
-\pagestyle{plain}
-
-% Paragraph style: No indentation.
-\setlength{\parindent}{0in}
-
-% Footnotes: Use symbols instead of numbers for labels.
-\renewcommand{\thefootnote}{\fnsymbol{footnote}}
-
-% Abbreviations for months.
-\newcommand{\LongMonth}[1]{%
-\ifcase#1\relax
-\or January%
-\or February%
-\or March%
-\or April%
-\or May%
-\or June%
-\or July%
-\or August%
-\or September%
-\or October%
-\or November%
-\or December%
-\fi}
-
-\newcommand{\Datestamp}[3]{\mbox{\LongMonth{#2} #1}}
-
-% Macro: title (name).
-\renewcommand{\title}[1]{%
-\pdfbookmark{#1}{#1}%
-\par\begin{center}%
-\par\begin{Huge}%
-\textbf{#1}%
-\par\end{Huge}%
-\par\end{center}%
-\par\vspace{-1.75em}\par}
-
-% Macro: subtitle (personal information below name).
-\newenvironment{subtitle}
+% Title (name)
+\renewcommand{\title}[1]
 {
-\par\begin{center}%
-\par\begin{small}
-}
-{
-\par\end{small}%
-\par\end{center}
-\par
+	\begin{Huge}%
+	\textbf{#1}%
+	\end{Huge}%
+	\par
+	\vspace{0.3mm}
 }
 
-% Macro: body (rest of the document).
-\newenvironment{body}
-{\par\vspace{-1em}\par
-\begin{longtable}{p{0.15\textwidth}p{0.80\textwidth}}}
-{\par\end{longtable}\par}
+% Information below the title.
+\newenvironment{header}
+{
+	\setlength{\parskip}{2mm}
+	\begin{center}
+}
+{
+	\end{center}
+}
 
-% Macro: section (new section for Education, Research Experience, etc.).
-\renewcommand{\section}[2]{\\[-1em]\pdfbookmark{#1}{#1}\\%
-\fontsize{9pt}{11pt}\selectfont\raggedright\textbf{\MakeUppercase{#2}}&}
+% Section box with title.
+\renewcommand{\section}[3]
+{
+	\begin{tikzpicture}
+		\draw (#2, #3) node {\uppercase{\textbf{#1}}};
+		\draw [thick] (0, 0) rectangle (6.6in, 0.8);
+	\end{tikzpicture}
+}
 
-% Macro: detail (text in smaller font under an entry).
-\newenvironment{detail}{\small\parbreak}
+% Starts section entry.
+\newenvironment{entry}[3]
+{
+	\begin{itemize}
+		\item #1\hfill#3
+		\textbf{\emph{#2}}
+		\begin{itemize}
+}
+{
+		\end{itemize}
+	\end{itemize}
+}
 
-% PDF settings and properties.
-\hypersetup{
-pdftitle={CV},
-pdfauthor={Peter Goldsborough},
-pdfsubject={http://www.thecodeinn.blogspot.com},
-pdfcreator={},
-pdfproducer={},
-pdfkeywords={},
-pdfpagemode={},
-bookmarks=true,
-unicode=true,
-bookmarksopen=true,
-pdfstartview=FitH,
-pdfpagelayout=OneColumn,
-pdfpagemode=UseOutlines,
-hidelinks,
-breaklinks}
+% Fancyheader will complain else.
+\setlength{\headheight}{15pt}
+
+% No indent at the start of a new paragraph.
+\setlength{\parindent}{0pt}
+
+% Adds an extra newline to paragraphs.
+\addtolength{\parskip}{\baselineskip}
+
+% Separator for the title.
+\newcommand{\separate}{\, {\scriptsize $\bullet$} \,}
+
+% Underlines urls.
+\newcommand{\link}[2]{\underline{\href{#2}{#1}}}
+
+% Section entry list-item: first level.
+\renewcommand{\labelitemi}{$\bullet$}
+
+% Section entry list-item: second level.
+\renewcommand{\labelitemii}{\large$\circ$}
