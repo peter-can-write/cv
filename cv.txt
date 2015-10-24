@@ -1,0 +1,68 @@
+Peter Goldsborough
+peter@goldsborough.me
+
+• linkedin.com/in/petergoldsborough
+
+• thecodeinn.blogspot.com
+
+WORK EXPERIENCE
+• Institute of Networked and Embedded Systems, Klagenfurt University, Austria
+Summer Intern
+
+07/2014
+
+◦ Ported Non-Intrusive-Appliance-Monitoring algorithms from MATLAB to Python, C++ and SQL.
+◦ Created data pipeline from an Arduino and C-based smart-meter to a Linux-driven UDOO dev-board by
+implementing a custom serial protocol in Python and Bash.
+
+◦ Visualized real-time appliance energy data in a Heroku cloud app using Python, Flask, PostgreSQL, HTML,
+CSS and Javascript; still live at nilm.herokuapp.com.
+• Institute of Networked and Embedded Systems, Klagenfurt University, Austria
+Research Intern
+
+10/2014 — Present
+
+◦ Further optimization and expansion of aforementioned work with main focus on applying machine-learning
+concepts to transform previously supervised algorithm to an unsupervised system.
+
+◦ Implemented real-time signal filtering, edge detection, clustering, feature-detection and SQLite database
+storage in C++ and Python, working with many million appliance-energy data-points.
+
+◦ Invented custom O(N log N ) clustering algorithm to replace existing O(N 2 ) solution.
+◦ Wrote 3481 lines of code between October 2014 and August 2015 (working 5-10 hours/week)
+SKILLS
+• Expert: C++, Python
+• Good: Java, Qt, PyQt, LATEX1 , Git, HTML, CSS/SASS
+• Intermediate: SQL, Arduino, AVR C
+
+• Prior Experience: JavaScript, Flask, Heroku
+• (Operating) Systems: OS X, Linux, Windows, Raspberry Pi, UDOO, Arduino, ATMEL µ-controllers
+
+PROJECTS
+• Various projects found at github.com/goldsborough; snippets and scripts at gist.github.com/goldsborough
+• Personal blog & website, old at thecodeinn.blogspot.com, new at goldsborough.me.
+• In-progress open-source C++ & Qt-based music synthesizer Anthem (26,575 lines of code so far) alongside 120page high-school diploma-thesis on the math, digital signal processing and engineering behind it.
+• Four-part freelance tutorial project Building a Text Editor with PyQt published on Binpress, currently with near 50
+stars on GitHub. Mentioned in PythonWeekly (issue 155) and PyCoder’s Weekly (issues 131 and 132) newsletters.
+
+EDUCATION
+• BG | BRG St. Martin High School, Villach, Austria
+
+09/2011 — 06/2015
+
+◦ Graduated as valedictorian with a grade average of 1.02 .
+◦ School president 2013/2014; long-time involvement in student representation.
+◦ Additional classes: Advanced Mathematics, Applied Physics, Cisco Networking.
+• Technical University of Munich, Germany
+B.Sc. in Computer Science
+
+◦ Admitted with a score of 100/100.
+1 See
+2 The
+
+CV. Beware: recursion.
+Austrian school system grades from 1 to 5, 1 being best.
+
+10/2015 — Present
+
+
