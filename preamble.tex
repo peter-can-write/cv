@@ -7,20 +7,24 @@
 % For symbols
 \usepackage{amsmath}
 \usepackage{amssymb}
-
+\usepackage{marvosym}
 \usepackage{multicol}
+\usepackage{gensymb}
 
 \usepackage[american]{babel}
-
 \usepackage[autostyle=true]{csquotes}
-
 \usepackage[usenames, dvipsnames]{xcolor}
 
 \usepackage{libertine}
-
 \usepackage{tikz}
-
 \usepackage{hyperref}
+\usepackage{listings}
+
+\DeclareSymbolFont{extraup}{U}{zavm}{m}{n}
+\DeclareMathSymbol{\varheart}{\mathalpha}{extraup}{86}
+
+% Level two list symbol
+\def\labelitemiii{$\star$}
 
 % Title (name)
 \renewcommand{\title}[1]
@@ -51,11 +55,20 @@
 	\end{tikzpicture}
 }
 
-% Starts section entry.
-\newenvironment{entry}[3]
+% Starts a new section entry with a flat structure.
+\newenvironment{simpleentry}
 {
 	\vspace{-5mm}
 	\begin{itemize}
+}
+{
+	\end{itemize}
+}
+
+% Starts section entry with a more emphasized outer structure.
+\newenvironment{entry}[3]
+{
+	\begin{simpleentry}
 		\item #1\hfill#3
 		\vspace{1mm}
 		#2
@@ -63,7 +76,7 @@
 }
 {
 		\end{itemize}
-	\end{itemize}
+	\end{simpleentry}
 }
 
 % Fancyheader will complain else.
