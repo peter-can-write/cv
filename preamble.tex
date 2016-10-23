@@ -45,9 +45,10 @@
 % Section box with title.
 \renewcommand{\section}[3]
 {
+  \vspace{-1mm}
 	\begin{tikzpicture}
 		\draw (#2, #3) node {\uppercase{\textbf{#1}}};
-		\draw [thick] (0, 0) rectangle (6.6in, 0.8);
+		\draw [thick] (0, 0) rectangle (6.65in, 0.8);
 	\end{tikzpicture}
 }
 
@@ -64,6 +65,7 @@
 {
 		\end{itemize}
 	\end{itemize}
+  \vspace{-1mm}
 }
 
 % Fancyheader will complain else.
