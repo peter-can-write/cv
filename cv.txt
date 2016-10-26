@@ -1,73 +1,68 @@
 Peter Goldsborough
-
 • peter@goldsborough.me
 • linkedin.com/in/petergoldsborough
-• thecodeinn.blogspot.com
+• goldsborough.me
 
 WORK EXPERIENCE
-• Institute of Networked and Embedded Systems, Klagenfurt University, Austria
-  Summer Intern
+• Bloomberg, London, United Kingdom
+Intern
 
-	07/2014
+11/2016 — 04/2017
 
-	Ported Non-Intrusive-Appliance-Monitoring algorithms from MATLAB to Python, C++ and SQL.
-	Visualized real-time appliance energy data in a Heroku cloud app using Python, Flask, PostgreSQL, HTML,
-	CSS and Javascript; still live at nilm.herokuapp.com.
-
-• Institute of Networked and Embedded Systems, Klagenfurt University, Austria
-  Research Intern
-  10/2014 — Present
-
-	Applying machine-learning and data-science techniques to make algorithms unsupervised.
-	Invented custom O(N log N ) clustering algorithm to replace existing O(N 2 ) solution.
-	Wrote 8363 lines of code between October 2014 and February 2016 (working 5-10 hours/week)
+◦ Currently deciding on team and project.
 
 • Google, London, United Kingdom
-  Software Engineering Intern
-	08/2016 — 11/2016
+Intern, gTech
 
-  Will be working on visualization so�ware for advertisement.
+08/2016 — 11/2016
 
-• Bloomberg, London, United Kingdom
-  Software Engineering Intern
-  11/2016 — 04/2017
+◦ Developing a web platform to interactively showcase Google’s ad technologies.
+◦ Learnt JavaScript, AngularJS, Go and Protobuf from scratch.
 
-  Currently deciding on project.
+• Technische Universität München, Germany
+Research Assistant, Chair for Database Systems
+
+04/2016 — 09/2016
+
+◦ Investigated interprocess communication techniques for low-latency transmission of database queries.
+◦ Implemented a software library (10,056 lines of C) that transparently replaces domain sockets by injecting
+a custom shared memory transmission channel. This speeds up applications by an order of magnitude.
+• Institute of Networked and Embedded Systems, Klagenfurt University, Austria
+Research Intern
+
+10/2014 — 07/2016
+
+◦ Applied machine learning to Non-Intrusive-Appliance-Monitoring (NILM) in Python, C++ and SQL.
+◦ Invented custom O(N log N ) clustering algorithm to replace existing O(N 2 ) solution.
+◦ Wrote 8363 lines of C++, Python and SQL code (working 5-10 hours/week)
 
 SKILLS
-
-• Very Good: C++, Python, Java
-
-• Good: Qt, LATEX1 , HTML, CSS/SASS, SQL
-
-• Intermediate: Arduino, AVR C, Git, Assembly
-
-• Prior Experience: JavaScript, Flask, Heroku, VHDL
+• Very Good: C++, Python, Java, C
+• Good: LATEX, HTML, CSS/SASS, JavaScript
+• Intermediate: ML, Git, Assembly, SQL
+• Prior Exposure: AngularJS, Arduino, AVR C, Qt, Go
 • (Operating) Systems: OS X, Linux, Windows, Arduino, ATMEL µ-controllers
 
 PROJECTS
-
+• Leading a team of 12 students to develop an architecture-independent assembly simulator in C++14 and Qt5 supporting RISCV-V, x86 and ARM ISAs. Next to development, I am responsible for (agile) management of the team.
+• Freelance tutorial project Building a Text Editor with PyQt published on Binpress, currently with almost 75 stars
+on GitHub. Mentioned in PythonWeekly (issue 155) and PyCoder’s Weekly (issues 131 and 132) newsletters.
+• Talks on Deep Learning with TensorFlow at PyCon UK, PyCon Germany and Python Munich.
 • Various projects found at github.com/goldsborough; snippets and scripts at gist.github.com/goldsborough
 • Personal blog & website, old at thecodeinn.blogspot.com, new at goldsborough.me.
 
-• In-progress open-source C++ & Qt-based music synthesizer Anthem (26,575 lines
-  of code so far) alongside 120page high-school diploma thesis on the math,
-  digital signal processing and engineering behind it.
-
-• Four-part freelance tutorial project Building a Text Editor with PyQt published on Binpress, currently with near 50
-stars on GitHub. Mentioned in PythonWeekly (issue 155) and PyCoder’s Weekly
-(issues 131 and 132) newsletters.
-
 EDUCATION
-
-• BG | BRG St. Martin High School, Villach, Austria
-  09/2011 — 06/2015
-
-  Graduated as valedictorian with straight A’s across all subjects and my thesis.
-  School president 2013/2014; long-time involvement in student representation.
-
 • Technical University of Munich (TUM), Germany
-	B.Sc. in Computer Science
+B.Sc. in Computer Science
 
-	Admitted with a score of 100/100.
-	Member of TUM Investment Club, working on Algorithmic Trading.
+10/2015 — Present
+
+◦ Admitted with a score of 100/100.
+◦ Top 5% in all courses.
+◦ Awarded German National Scholarship (1% of applicants admitted)
+
+PUBLICATIONS
+• Christoph Klemenjak, Peter Goldsborough, NILM: A Review and Outlook, Sep. 2016. Preprint: arXiv:1610.01191
+• Peter Goldsborough, A Tour of TensorFlow, Aug. 2016. Available: arXiv:1610.01178
+
+
